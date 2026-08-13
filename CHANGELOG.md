@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to WebFreeAI.
+All notable changes to FreeWebAI.
 
 ## [0.1.0] - 2026-08-13
 

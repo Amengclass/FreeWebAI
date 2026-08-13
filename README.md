@@ -1,17 +1,17 @@
 <div align="center">
 
-# WebFreeAI
+# FreeWebAI
 
 **Unified OpenAI-compatible gateway over 10 free web AIs**
 
 Turn your logged-in Chrome AI subscriptions (Gemini / ChatGPT / Claude / Qwen / Kimi / MiniMax / ChatGLM / Doubao / MiMo / DeepSeek) into a single warm daemon with one API — name a provider, send a prompt, get an answer.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/github/v/release/Amengclass/WebFreeAI?color=blue&label=version)](https://github.com/Amengclass/WebFreeAI/releases)
-[![Stars](https://img.shields.io/github/stars/Amengclass/WebFreeAI?style=social)](https://github.com/Amengclass/WebFreeAI)
+[![Version](https://img.shields.io/github/v/release/Amengclass/FreeWebAI?color=blue&label=version)](https://github.com/Amengclass/FreeWebAI/releases)
+[![Stars](https://img.shields.io/github/stars/Amengclass/FreeWebAI?style=social)](https://github.com/Amengclass/FreeWebAI)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](README.md)
 [![Built with Node.js](https://img.shields.io/badge/built%20with-Node.js-orange.svg)](package.json)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Amengclass/WebFreeAI/pulls)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Amengclass/FreeWebAI/pulls)
 
 English | [中文](README_ZH.md) | [Changelog](CHANGELOG.md)
 
@@ -39,7 +39,7 @@ Any client (OpenAI SDK / curl / Claude Code / MCP)
         ├─ CLI (node src/cli.js) ─────────────┤
         └─ MCP server (stdio) ────────────────┤
                                               ▼
-                              WebFreeAI daemon (long-lived Node process)
+                              FreeWebAI daemon (long-lived Node process)
                                 │  single CDP connection + warm tabs
                                 │  in-process dispatch via providerFactory
                                 ▼
@@ -53,8 +53,8 @@ Any client (OpenAI SDK / curl / Claude Code / MCP)
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/Amengclass/WebFreeAI.git
-cd WebFreeAI
+git clone https://github.com/Amengclass/FreeWebAI.git
+cd FreeWebAI
 npm install
 
 # 1. Make sure your debug Chrome is running with the AI sites logged in
@@ -74,9 +74,9 @@ Copy `.env.example` to `.env` (all values optional; sensible defaults below):
 
 | Variable | Default | Description |
 |---|---|---|
-| `AGENTCHAT_LIB_PATH` | auto-detect | Path to AgentChat's `skills/lib` (auto-detected when WebFreeAI sits next to AgentChat) |
+| `AGENTCHAT_LIB_PATH` | auto-detect | Path to AgentChat's `skills/lib` (auto-detected when FreeWebAI sits next to AgentChat) |
 | `CDP_HOST` / `CDP_PORT` | `127.0.0.1` / `9222` | Chrome DevTools endpoint |
-| `HUB_HOST` / `HUB_PORT` | `127.0.0.1` / `8787` | WebFreeAI HTTP daemon binding |
+| `HUB_HOST` / `HUB_PORT` | `127.0.0.1` / `8787` | FreeWebAI HTTP daemon binding |
 | `PROXY_SERVER` | *(empty)* | Required for mainland China (e.g. `http://127.0.0.1:7897`) |
 | `HUB_TIMEOUT_MS` | `120000` | Default per-call budget |
 | `HUB_GEMINI_FAST` | `1` | Skip Gemini Pro model activation (faster, uses the page's default model) |
@@ -104,7 +104,7 @@ Copy `.env.example` to `.env` (all values optional; sensible defaults below):
 
 Both projects drive the same logged-in Chrome via the same `skills/lib`. The difference is *lifecycle and surface*:
 
-| | AgentChat (original skill) | WebFreeAI (this repo) |
+| | AgentChat (original skill) | FreeWebAI (this repo) |
 |---|---|---|
 | Lifecycle | spawns a new Node process per call | long-lived warm daemon |
 | First-class protocol | CLI / slash command only | HTTP + CLI + **MCP** |
@@ -133,7 +133,7 @@ No. Free web AIs only exist inside the browser — there is no public API. If yo
 ## 📁 Project Structure
 
 ```
-WebFreeAI/
+FreeWebAI/
 ├── src/
 │   ├── hub.js        # warm daemon core: CDP, warm tabs, dispatch, cooldown, reconnect
 │   ├── http.js       # REST + OpenAI-compatible endpoints
