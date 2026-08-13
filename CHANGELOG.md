@@ -15,6 +15,7 @@ All notable changes to FreeWebAI.
 ### Changed
 - Aggressive response-completion detection: 3s stability window + 1s poll (vs adapters' 10s/2s) — safe because the universal stop-button guard resets the clock while generation is visibly in progress.
 - Default fresh-conversation per call (`new_chat` omitted → true) for reliability; `--reuse` / `new_chat:false` stays opt-in.
+- Docs: `README.md` is now the Chinese main document (English moved to `README_EN.md`); both READMEs now include a usage/risk disclaimer, trademark notice, and copyright takedown (contact-to-delete) statement.
 
 ### Fixed
 - Gemini editor automation: the web UI update broke the upstream adapter's editor input; `src/hub.js` overrides Gemini's `input` (re-query + retry loop) so automated sends work again.
