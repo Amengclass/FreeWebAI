@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Local config — never commit
+.env
+
+# Logs & runtime data
+*.log
+data/
+
+# OS
+.DS_Store
+Thumbs.db

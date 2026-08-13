@@ -1,0 +1,21 @@
+{
+  "name": "ai-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Unified warm-daemon interface over AgentChat's free web AI providers (CDP bridge). Provider/model name + prompt in, answer out.",
+  "main": "src/hub.js",
+  "scripts": {
+    "start": "node src/http.js",
+    "chat": "node src/cli.js",
+    "mcp": "node src/mcp.mjs",
+    "stop": "node src/cli.js --stop"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "playwright-core": "^1.61.0",
+    "zod": "^3.23.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
