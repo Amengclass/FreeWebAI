@@ -7,11 +7,11 @@
 Turn your logged-in Chrome AI subscriptions (Gemini / ChatGPT / Claude / Qwen / Kimi / MiniMax / ChatGLM / Doubao / MiMo / DeepSeek) into a single warm daemon with one API — name a provider, send a prompt, get an answer.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/github/v/release/Amengclass/ai-hub?color=blue&label=version)](https://github.com/Amengclass/ai-hub/releases)
-[![Stars](https://img.shields.io/github/stars/Amengclass/ai-hub?style=social)](https://github.com/Amengclass/ai-hub)
+[![Version](https://img.shields.io/github/v/release/Amengclass/FreeWebAI?color=blue&label=version)](https://github.com/Amengclass/FreeWebAI/releases)
+[![Stars](https://img.shields.io/github/stars/Amengclass/FreeWebAI?style=social)](https://github.com/Amengclass/FreeWebAI)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](README.md)
 [![Built with Node.js](https://img.shields.io/badge/built%20with-Node.js-orange.svg)](package.json)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Amengclass/ai-hub/pulls)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Amengclass/FreeWebAI/pulls)
 
 English | [中文](README_ZH.md) | [Changelog](CHANGELOG.md)
 
@@ -53,7 +53,7 @@ Any client (OpenAI SDK / curl / Claude Code / MCP)
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/Amengclass/ai-hub.git
+git clone https://github.com/Amengclass/FreeWebAI.git
 cd ai-hub
 npm install
 

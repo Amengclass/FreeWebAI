@@ -7,11 +7,11 @@
 把你已登录的 Chrome AI 订阅（Gemini / ChatGPT / Claude / 通义千问 / Kimi / MiniMax / 智谱清言 / 豆包 / MiMo / DeepSeek）变成一个常驻服务 + 一个 API：报名字、发 prompt、拿答案。
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/github/v/release/Amengclass/ai-hub?color=blue&label=version)](https://github.com/Amengclass/ai-hub/releases)
-[![Stars](https://img.shields.io/github/stars/Amengclass/ai-hub?style=social)](https://github.com/Amengclass/ai-hub)
+[![Version](https://img.shields.io/github/v/release/Amengclass/FreeWebAI?color=blue&label=version)](https://github.com/Amengclass/FreeWebAI/releases)
+[![Stars](https://img.shields.io/github/stars/Amengclass/FreeWebAI?style=social)](https://github.com/Amengclass/FreeWebAI)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](README_ZH.md)
 [![Built with Node.js](https://img.shields.io/badge/built%20with-Node.js-orange.svg)](package.json)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Amengclass/ai-hub/pulls)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Amengclass/FreeWebAI/pulls)
 
 [English](README.md) | 中文 | [Changelog](CHANGELOG.md)
 
@@ -53,7 +53,7 @@
 ## 🚀 快速开始
 
 ```bash
-git clone https://github.com/Amengclass/ai-hub.git
+git clone https://github.com/Amengclass/FreeWebAI.git
 cd ai-hub
 npm install
 
