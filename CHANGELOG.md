@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to ai-hub.
+All notable changes to WebFreeAI.
 
 ## [0.1.0] - 2026-08-13
 

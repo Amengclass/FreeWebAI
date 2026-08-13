@@ -1,5 +1,5 @@
 {
-  "name": "freewebai",
+  "name": "web-free-ai",
   "version": "0.1.0",
   "private": true,
   "description": "Unified warm-daemon interface over AgentChat's free web AI providers (CDP bridge). Provider/model name + prompt in, answer out.",

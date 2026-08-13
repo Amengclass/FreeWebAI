@@ -1,17 +1,17 @@
 <div align="center">
 
-# ai-hub
+# WebFreeAI
 
 **统一 10 个免费网页 AI 的 OpenAI 兼容网关**
 
 把你已登录的 Chrome AI 订阅（Gemini / ChatGPT / Claude / 通义千问 / Kimi / MiniMax / 智谱清言 / 豆包 / MiMo / DeepSeek）变成一个常驻服务 + 一个 API：报名字、发 prompt、拿答案。
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/github/v/release/Amengclass/FreeWebAI?color=blue&label=version)](https://github.com/Amengclass/FreeWebAI/releases)
-[![Stars](https://img.shields.io/github/stars/Amengclass/FreeWebAI?style=social)](https://github.com/Amengclass/FreeWebAI)
+[![Version](https://img.shields.io/github/v/release/Amengclass/WebFreeAI?color=blue&label=version)](https://github.com/Amengclass/WebFreeAI/releases)
+[![Stars](https://img.shields.io/github/stars/Amengclass/WebFreeAI?style=social)](https://github.com/Amengclass/WebFreeAI)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](README_ZH.md)
 [![Built with Node.js](https://img.shields.io/badge/built%20with-Node.js-orange.svg)](package.json)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Amengclass/FreeWebAI/pulls)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Amengclass/WebFreeAI/pulls)
 
 [English](README.md) | 中文 | [Changelog](CHANGELOG.md)
 
@@ -39,7 +39,7 @@
         ├─ CLI (node src/cli.js) ─────────────┤
         └─ MCP server (stdio) ────────────────┤
                                               ▼
-                              ai-hub daemon（常驻 Node 进程）
+                              WebFreeAI daemon（常驻 Node 进程）
                                 │  单次 CDP 连接 + 热 tab
                                 │  进程内调度（复用 providerFactory）
                                 ▼
@@ -53,8 +53,8 @@
 ## 🚀 快速开始
 
 ```bash
-git clone https://github.com/Amengclass/FreeWebAI.git
-cd ai-hub
+git clone https://github.com/Amengclass/WebFreeAI.git
+cd WebFreeAI
 npm install
 
 # 1. 确保专用调试 Chrome 已跑且各 AI 网页已登录
@@ -104,7 +104,7 @@ node src/cli.js --provider=deepseek "解释一下思维链"
 
 两者驱动同一个已登录 Chrome、复用同一套 `skills/lib`。区别在**生命周期与接口面**：
 
-| | AgentChat（原仓） | ai-hub（本仓库） |
+| | AgentChat（原仓） | WebFreeAI（本仓库） |
 |---|---|---|
 | 生命周期 | 每次调用 spawn 新进程 | 常驻热 daemon |
 | 一等接口 | 仅 CLI / 斜杠命令 | HTTP + CLI + **MCP** |
@@ -133,7 +133,7 @@ node src/cli.js --provider=deepseek "解释一下思维链"
 ## 📁 项目结构
 
 ```
-ai-hub/
+WebFreeAI/
 ├── src/
 │   ├── hub.js        # 热 daemon 核心：CDP、热 tab、调度、冷却、重连
 │   ├── http.js       # REST + OpenAI 兼容端点
